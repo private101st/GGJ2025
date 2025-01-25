@@ -1,7 +1,8 @@
-[gd_scene load_steps=3 format=3 uid="uid://dq78whhunnx84"]
+[gd_scene load_steps=4 format=3 uid="uid://dq78whhunnx84"]
 
 [ext_resource type="Script" path="res://scenes/event.gd" id="1_mnp8t"]
-[ext_resource type="Script" path="res://scenes/Button.gd" id="2_dfcwm"]
+[ext_resource type="Script" path="res://scenes/Buttonoption.gd" id="2_i5oev"]
+[ext_resource type="Script" path="res://autoload/Buttontext.gd" id="3_4duya"]
 
 [node name="Event" type="Node2D"]
 script = ExtResource("1_mnp8t")
@@ -11,24 +12,30 @@ offset_left = 236.0
 offset_top = 415.0
 offset_right = 451.0
 offset_bottom = 525.0
-script = ExtResource("2_dfcwm")
+script = ExtResource("2_i5oev")
 
 [node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
 offset_right = 1706.0
 offset_bottom = 884.0
-scale = Vector2(0.124885, 0.122182)
+scale = Vector2(0.125885, 0.126045)
+theme_override_font_sizes/font_size = 150
+text = "option 1"
+script = ExtResource("3_4duya")
 
 [node name="Panel2" type="Panel" parent="."]
 offset_left = 769.0
 offset_top = 415.0
 offset_right = 977.0
 offset_bottom = 518.0
-script = ExtResource("2_dfcwm")
+script = ExtResource("2_i5oev")
 
 [node name="Button" type="Button" parent="Panel2"]
 layout_mode = 0
 offset_right = 210.0
 offset_bottom = 103.0
+text = "option 2"
+script = ExtResource("3_4duya")
 
-[connection signal="pressed" from="Panel/Button" to="Panel" method="_on_button_pressed" binds= ["1"]]
-[connection signal="pressed" from="Panel2/Button" to="Panel2" method="_on_button_pressed" binds= ["2"]]
+[connection signal="ready" from="Panel/Button" to="Panel/Button" method="getText" binds= ["1"]]
+[connection signal="ready" from="Panel2/Button" to="Panel2/Button" method="getText" binds= ["2"]]

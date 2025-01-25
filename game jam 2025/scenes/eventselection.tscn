@@ -1,0 +1,63 @@
+[gd_scene load_steps=3 format=3 uid="uid://l6n5m0a0akos"]
+
+[ext_resource type="Script" path="res://scenes/Button.gd" id="1_hvxys"]
+[ext_resource type="Script" path="res://autoload/level.gd" id="1_uc4nr"]
+
+[node name="Node2D" type="Node2D"]
+script = ExtResource("1_uc4nr")
+
+[node name="Panel" type="Panel" parent="."]
+offset_left = 143.0
+offset_top = 76.0
+offset_right = 183.0
+offset_bottom = 116.0
+scale = Vector2(5.84795, 5.23561)
+script = ExtResource("1_hvxys")
+
+[node name="Button" type="Button" parent="Panel"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(0.65955, 1.27396)
+text = "event1"
+
+[node name="Panel2" type="Panel" parent="."]
+offset_left = 465.0
+offset_top = 101.0
+offset_right = 505.0
+offset_bottom = 141.0
+scale = Vector2(6.58161, 4.47289)
+script = ExtResource("1_hvxys")
+
+[node name="Button" type="Button" parent="Panel2"]
+layout_mode = 0
+offset_right = 8.0
+offset_bottom = 8.0
+scale = Vector2(0.676025, 1.32678)
+text = "event2"
+
+[node name="Panel3" type="Panel" parent="."]
+offset_left = 859.0
+offset_top = 121.0
+offset_right = 899.0
+offset_bottom = 161.0
+scale = Vector2(5.12536, 3.6194)
+
+[node name="Panel4" type="Panel" parent="."]
+offset_left = 166.0
+offset_top = 391.0
+offset_right = 206.0
+offset_bottom = 431.0
+scale = Vector2(5.4936, 4.27043)
+
+[node name="Panel5" type="Panel" parent="."]
+offset_left = 502.0
+offset_top = 393.0
+offset_right = 542.0
+offset_bottom = 433.0
+scale = Vector2(5.62564, 4.60379)
+
+[connection signal="pressed" from="Panel/Button" to="." method="changelevel" binds= ["1"]]
+[connection signal="pressed" from="Panel/Button" to="Panel" method="_on_button_pressed" binds= ["1"]]
+[connection signal="pressed" from="Panel2/Button" to="." method="changelevel" binds= ["2"]]
+[connection signal="pressed" from="Panel2/Button" to="Panel2" method="_on_button_pressed" binds= ["2"]]

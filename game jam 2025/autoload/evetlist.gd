@@ -22,6 +22,11 @@ var events =[
 				"world_update":{
 					"climate":-5
 				}
+			},
+			{
+				"id": "1.3",
+				"title": "ND",
+				"desc": "ND"
 			}
 		]
 	},
@@ -43,17 +48,10 @@ var events =[
 		]
 	},
 ] 
-
-var world_state = {
-	"science": 0,
-	"economy": 0,
-	"cimate": 1000
-}
+#var options = []
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	world_state["science"] = 0;
-	world_state["economy"] = 50;
 	pass # Replace with function body.
 
 #var delta_total = 0;
@@ -66,16 +64,22 @@ func _process(delta):
 		#trigger_event(1);
 	pass
 func trigger_event(id):
-	print("ok")
 	var index = -1
 	for x in events:
 		index += 1
 		if x["id"] == id:
-			#index = index
+			#index = index    ### mi trova l'indice dell'evento cercato
+				
+			get_tree().change_scene_to_file("res://scenes/event.tscn")
+			
+			
+			#Buttontext.getText(index, events[index]["options"])
 			break
+
 	#var _num_options = events[index].count
 	
-	for x in events[index]["options"]:
-		print(x["title"])
-		print(x["desc"])
-		
+	#for x in events[index]["options"]:
+	#	print(x["title"])
+	#	print(x["desc"])
+func trigger_option(eventindex, id):
+	return events[eventindex]["options"][id]["desc"]

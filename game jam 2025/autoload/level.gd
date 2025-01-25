@@ -1,14 +1,12 @@
-extends Node2D
+extends Node
 
+var levelid = -1
 
 # Called when the node enters the scene tree for the first time.
 func _ready():
-	pass
-#func load_from_file():
-#		var file = FileAccess.open("res://events_list.txt", FileAccess.READ)
-#		var content = file.get_as_text()
-#		return content
-
+	pass # Replace with function body.
+func changelevel(id):
+	Level.levelid = id
 # Called every frame. 'delta' is the elapsed time since the previous frame.
 func _process(delta):
 	pass
