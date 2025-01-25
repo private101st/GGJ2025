@@ -6,9 +6,13 @@
 
 [node name="Game" type="Node2D"]
 
-[node name="inGame" parent="." instance=ExtResource("2_r34qk")]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 
 [node name="EventTab" parent="." instance=ExtResource("2_ytwrt")]
+visible = false
+
+[node name="inGame" parent="." instance=ExtResource("2_r34qk")]
+visible = false
 
 [node name="TitleScreen" parent="." instance=ExtResource("3_j2ffq")]
 offset_left = -321.0

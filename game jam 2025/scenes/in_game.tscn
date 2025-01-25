@@ -1,7 +1,7 @@
-[gd_scene load_steps=10 format=3 uid="uid://bprnke6idswl6"]
+[gd_scene load_steps=11 format=3 uid="uid://bprnke6idswl6"]
 
 [ext_resource type="Script" path="res://scripts/in_game.gd" id="1_6qcy7"]
-[ext_resource type="Texture2D" uid="uid://ddterhup8iofl" path="res://assets/New Piskel (1).png" id="1_wttpt"]
+[ext_resource type="Texture2D" uid="uid://kn34nwtgnhnt" path="res://assets/disegno_bottoni.png" id="2_0oyud"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_53o80"]
 
@@ -12,28 +12,36 @@
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mkth5"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j350d"]
-texture = ExtResource("1_wttpt")
-texture_margin_left = 3.0
-texture_margin_top = 3.0
-texture_margin_right = 3.0
-texture_margin_bottom = 3.0
-region_rect = Rect2(8, 1, 17, 8)
+texture = ExtResource("2_0oyud")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+region_rect = Rect2(1, 85, 38, 14)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ft4wt"]
-texture = ExtResource("1_wttpt")
-texture_margin_left = 3.0
-texture_margin_top = 3.0
-texture_margin_right = 3.0
-texture_margin_bottom = 3.0
-region_rect = Rect2(8, 11, 17, 8)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_xpldp"]
+texture = ExtResource("2_0oyud")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+region_rect = Rect2(42, 55, 38, 14)
 
-[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ci5d"]
-texture = ExtResource("1_wttpt")
-texture_margin_left = 3.0
-texture_margin_top = 3.0
-texture_margin_right = 3.0
-texture_margin_bottom = 3.0
-region_rect = Rect2(8, 1, 17, 8)
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ratmo"]
+texture = ExtResource("2_0oyud")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+region_rect = Rect2(1, 70, 19, 14)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_45u0t"]
+texture = ExtResource("2_0oyud")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+region_rect = Rect2(42, 40, 19, 14)
 
 [node name="inGame" type="Node2D"]
 script = ExtResource("1_6qcy7")
@@ -42,7 +50,7 @@ script = ExtResource("1_6qcy7")
 modulate = Color(0.0139623, 0.00027156, 0.0592547, 1)
 self_modulate = Color(0, 0, 0, 1)
 position = Vector2(2.99973, 1.99986)
-scale = Vector2(1326, 838.211)
+scale = Vector2(3770, 2383.15)
 texture = SubResource("CanvasTexture_53o80")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
@@ -53,14 +61,46 @@ texture = SubResource("CanvasTexture_f07cj")
 
 [node name="Events" type="Button" parent="."]
 offset_left = -61.0
-offset_top = 103.0
+offset_top = 126.0
 offset_right = 60.0
-offset_bottom = 143.0
+offset_bottom = 166.0
 theme = SubResource("Theme_roxym")
 theme_override_font_sizes/font_size = 30
 theme_override_styles/focus = SubResource("StyleBoxEmpty_mkth5")
 theme_override_styles/hover = SubResource("StyleBoxTexture_j350d")
-theme_override_styles/pressed = SubResource("StyleBoxTexture_ft4wt")
-theme_override_styles/normal = SubResource("StyleBoxTexture_6ci5d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_xpldp")
+theme_override_styles/normal = SubResource("StyleBoxTexture_j350d")
+
+[node name="StatsButton" type="Button" parent="."]
+offset_left = -317.0
+offset_top = -169.0
+offset_right = -257.0
+offset_bottom = -128.0
+theme = SubResource("Theme_roxym")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mkth5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_ratmo")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_45u0t")
+theme_override_styles/normal = SubResource("StyleBoxTexture_ratmo")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.7, 1.7)
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="GridContainer" type="GridContainer" parent="."]
+offset_left = 88.0
+offset_top = -59.0
+offset_right = 128.0
+offset_bottom = -19.0
+scale = Vector2(0.80463, 0.730589)
+
+[node name="EventGridContainer" type="GridContainer" parent="."]
+offset_left = -201.0
+offset_top = -168.0
+offset_right = -161.0
+offset_bottom = -128.0
 
 [connection signal="pressed" from="Events" to="." method="_on_events_pressed"]

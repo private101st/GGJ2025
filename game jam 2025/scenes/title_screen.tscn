@@ -1,6 +1,7 @@
-[gd_scene load_steps=9 format=3 uid="uid://mn15mfscesvf"]
+[gd_scene load_steps=13 format=3 uid="uid://mn15mfscesvf"]
 
 [ext_resource type="FontFile" uid="uid://deio8th2c5mp4" path="res://assets/Pixelmax-Regular.otf" id="1_jes8e"]
+[ext_resource type="Script" path="res://scenes/title_screen.gd" id="1_pdktk"]
 [ext_resource type="Texture2D" uid="uid://kn34nwtgnhnt" path="res://assets/disegno_bottoni.png" id="2_2e7ml"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_p7qvt"]
@@ -15,6 +16,14 @@ expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 region_rect = Rect2(1, 85, 38, 14)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_x3ehp"]
+texture = ExtResource("2_2e7ml")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+region_rect = Rect2(42, 55, 38, 14)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_chb5d"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_0xqog"]
@@ -25,7 +34,23 @@ expand_margin_right = 5.0
 expand_margin_bottom = 5.0
 region_rect = Rect2(1, 85, 38, 14)
 
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_pse8c"]
+texture = ExtResource("2_2e7ml")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+region_rect = Rect2(42, 55, 38, 14)
+
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_rjshf"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ecbju"]
+texture = ExtResource("2_2e7ml")
+expand_margin_left = 5.0
+expand_margin_top = 5.0
+expand_margin_right = 5.0
+expand_margin_bottom = 5.0
+region_rect = Rect2(42, 55, 38, 14)
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -38,6 +63,7 @@ offset_right = -1.0
 offset_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_pdktk")
 
 [node name="Background" type="Sprite2D" parent="."]
 modulate = Color(0.0139623, 0.00027156, 0.0592547, 1)
@@ -66,6 +92,7 @@ offset_right = 165.0
 offset_bottom = 240.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_jatro")
 theme_override_styles/hover = SubResource("StyleBoxTexture_b2q1k")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_x3ehp")
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2q1k")
 
 [node name="OptionsButton" type="Button" parent="."]
@@ -76,6 +103,7 @@ offset_right = 165.0
 offset_bottom = 297.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_chb5d")
 theme_override_styles/hover = SubResource("StyleBoxTexture_0xqog")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_pse8c")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0xqog")
 
 [node name="QuitButton" type="Button" parent="."]
@@ -86,4 +114,9 @@ offset_right = 165.0
 offset_bottom = 354.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_rjshf")
 theme_override_styles/hover = SubResource("StyleBoxTexture_0xqog")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ecbju")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0xqog")
+
+[connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
+[connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
+[connection signal="pressed" from="QuitButton" to="." method="_on_quit_button_pressed"]
