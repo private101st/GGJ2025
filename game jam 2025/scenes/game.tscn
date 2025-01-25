@@ -1,7 +1,8 @@
-[gd_scene load_steps=10 format=3 uid="uid://c322y4d210nje"]
+[gd_scene load_steps=12 format=3 uid="uid://c322y4d210nje"]
 
 [ext_resource type="Script" path="res://scenes/game.gd" id="1_ndmws"]
 [ext_resource type="Texture2D" uid="uid://ddterhup8iofl" path="res://assets/New Piskel (1).png" id="2_pbxpp"]
+[ext_resource type="PackedScene" uid="uid://dakebyn1t2kdu" path="res://scenes/Events.tscn" id="3_qshd5"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_j7s6r"]
 
@@ -20,6 +21,8 @@ corner_radius_bottom_right = 4
 corner_radius_bottom_left = 4
 
 [sub_resource type="Theme" id="Theme_6k0md"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_qnax0"]
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_p4vm7"]
 texture = ExtResource("2_pbxpp")
@@ -78,8 +81,15 @@ offset_right = 60.0
 offset_bottom = 143.0
 theme = SubResource("Theme_6k0md")
 theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_qnax0")
 theme_override_styles/hover = SubResource("StyleBoxTexture_p4vm7")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_1qw7u")
 theme_override_styles/normal = SubResource("StyleBoxTexture_t7y1i")
+
+[node name="Control" parent="." instance=ExtResource("3_qshd5")]
+offset_left = 1.0
+offset_top = 1.0
+offset_right = 1.0
+offset_bottom = 1.0
 
 [connection signal="pressed" from="Events" to="." method="_on_events_pressed"]

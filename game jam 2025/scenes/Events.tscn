@@ -1,0 +1,23 @@
+[gd_scene format=3 uid="uid://dakebyn1t2kdu"]
+
+[node name="Control" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Panel" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 273.0
+offset_top = 147.0
+offset_right = 751.0
+offset_bottom = 479.0
+
+[node name="ColorRect" type="ColorRect" parent="Panel"]
+layout_mode = 0
+offset_left = -511.0
+offset_top = -310.0
+offset_right = -30.0
+offset_bottom = 20.0
