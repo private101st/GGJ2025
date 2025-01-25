@@ -11,8 +11,14 @@ config_version=5
 [application]
 
 config/name="Popping the Fermi Paradox"
+run/main_scene="res://scenes/event.tscn"
 config/features=PackedStringArray("4.2", "GL Compatibility")
 config/icon="res://icon.svg"
+
+[autoload]
+
+Settings="*res://autoload/settings.gd"
+Evetlist="*res://autoload/evetlist.gd"
 
 [rendering]
 

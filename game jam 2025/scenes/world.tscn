@@ -1,0 +1,16 @@
+[gd_scene load_steps=3 format=3 uid="uid://ceialww62dsb4"]
+
+[ext_resource type="PackedScene" uid="uid://bs4u7cd2gqtq" path="res://scenes/decision.tscn" id="1_odlxq"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_v55i8"]
+
+[node name="World" type="Node2D"]
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(190.75, 139.25)
+scale = Vector2(382.5, 279.5)
+texture = SubResource("CanvasTexture_v55i8")
+
+[node name="Node" type="Node" parent="."]
+
+[node name="Decision" parent="." instance=ExtResource("1_odlxq")]

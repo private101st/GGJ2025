@@ -1,0 +1,6 @@
+[gd_scene load_steps=2 format=3 uid="uid://bs4u7cd2gqtq"]
+
+[ext_resource type="Script" path="res://scenes/decision.gd" id="1_oqc0d"]
+
+[node name="Decision" type="Node2D"]
+script = ExtResource("1_oqc0d")
