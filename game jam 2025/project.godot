@@ -13,7 +13,11 @@ config_version=5
 config/name="Popping the Fermi Paradox"
 <<<<<<< Updated upstream
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 run/main_scene="res://scenes/eventselection.tscn"
+=======
+run/main_scene="res://scenes/title_screen.tscn"
+>>>>>>> Stashed changes
 =======
 run/main_scene="res://scenes/title_screen.tscn"
 >>>>>>> Stashed changes
@@ -26,6 +30,7 @@ run/size/resizable=true
 run/defaults/default_clear_color=Color(0, 0, 0, 1)
 run/size/mode=0
 <<<<<<< Updated upstream
+<<<<<<< Updated upstream
 
 [autoload]
 
@@ -33,6 +38,8 @@ Settings="*res://autoload/settings.gd"
 Evetlist="*res://autoload/evetlist.gd"
 Buttontext="*res://autoload/Buttontext.gd"
 Level="*res://autoload/level.gd"
+=======
+>>>>>>> Stashed changes
 =======
 >>>>>>> Stashed changes
 
