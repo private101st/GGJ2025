@@ -11,9 +11,16 @@ config_version=5
 [application]
 
 config/name="Popping the Fermi Paradox"
+<<<<<<< Updated upstream
 run/main_scene="res://scenes/eventselection.tscn"
+=======
+run/main_scene="res://scenes/title_screen.tscn"
+>>>>>>> Stashed changes
 config/features=PackedStringArray("4.3", "GL Compatibility")
 config/icon="res://icon.svg"
+run/size/resizable=true
+run/defaults/default_clear_color=Color(0, 0, 0, 1)
+run/size/mode=0
 
 [autoload]
 

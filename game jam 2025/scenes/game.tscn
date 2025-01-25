@@ -16,6 +16,7 @@ visible = false
 [node name="inGame" parent="." instance=ExtResource("2_r34qk")]
 visible = false
 
+<<<<<<< Updated upstream
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t7y1i"]
 texture = ExtResource("2_pbxpp")
 texture_margin_left = 3.0
@@ -78,3 +79,10 @@ theme_override_styles/hover = SubResource("StyleBoxTexture_p4vm7")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_1qw7u")
 
 [connection signal="pressed" from="Events" to="." method="_on_events_pressed"]
+=======
+[node name="TitleScreen" parent="." instance=ExtResource("3_j2ffq")]
+offset_left = -321.0
+offset_top = -192.0
+offset_right = -321.0
+offset_bottom = -192.0
+>>>>>>> Stashed changes
