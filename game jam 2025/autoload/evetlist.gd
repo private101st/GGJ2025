@@ -82,4 +82,4 @@ func trigger_event(id):
 	#	print(x["title"])
 	#	print(x["desc"])
 func trigger_option(eventindex, id):
-	return events[eventindex]["options"][id]["desc"]
+	print(events[eventindex]["options"][id]["world_update"])
