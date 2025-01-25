@@ -6,8 +6,15 @@
 
 [node name="Game" type="Node2D"]
 
-[node name="TitleScreen" parent="." instance=ExtResource("3_j2ffq")]
-
 [node name="inGame" parent="." instance=ExtResource("2_r34qk")]
 
 [node name="EventTab" parent="." instance=ExtResource("2_ytwrt")]
+
+[node name="TitleScreen" parent="." instance=ExtResource("3_j2ffq")]
+offset_left = -321.0
+offset_top = -192.0
+offset_right = -321.0
+offset_bottom = -192.0
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(1.7, 1.7)

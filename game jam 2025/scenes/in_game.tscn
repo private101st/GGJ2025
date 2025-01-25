@@ -51,9 +51,6 @@ rotation = 3.14159
 scale = Vector2(150, -147.174)
 texture = SubResource("CanvasTexture_f07cj")
 
-[node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
-
 [node name="Events" type="Button" parent="."]
 offset_left = -61.0
 offset_top = 103.0
