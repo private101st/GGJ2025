@@ -1,0 +1,67 @@
+[gd_scene load_steps=10 format=3 uid="uid://bprnke6idswl6"]
+
+[ext_resource type="Script" path="res://scripts/in_game.gd" id="1_6qcy7"]
+[ext_resource type="Texture2D" uid="uid://ddterhup8iofl" path="res://assets/New Piskel (1).png" id="1_wttpt"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_53o80"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_f07cj"]
+
+[sub_resource type="Theme" id="Theme_roxym"]
+
+[sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_mkth5"]
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_j350d"]
+texture = ExtResource("1_wttpt")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(8, 1, 17, 8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_ft4wt"]
+texture = ExtResource("1_wttpt")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(8, 11, 17, 8)
+
+[sub_resource type="StyleBoxTexture" id="StyleBoxTexture_6ci5d"]
+texture = ExtResource("1_wttpt")
+texture_margin_left = 3.0
+texture_margin_top = 3.0
+texture_margin_right = 3.0
+texture_margin_bottom = 3.0
+region_rect = Rect2(8, 1, 17, 8)
+
+[node name="inGame" type="Node2D"]
+script = ExtResource("1_6qcy7")
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.0139623, 0.00027156, 0.0592547, 1)
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(2.99973, 1.99986)
+scale = Vector2(1326, 838.211)
+texture = SubResource("CanvasTexture_53o80")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+position = Vector2(0.670166, 1.64807)
+rotation = 3.14159
+scale = Vector2(150, -147.174)
+texture = SubResource("CanvasTexture_f07cj")
+
+[node name="Camera2D" type="Camera2D" parent="."]
+zoom = Vector2(2, 2)
+
+[node name="Events" type="Button" parent="."]
+offset_left = -61.0
+offset_top = 103.0
+offset_right = 60.0
+offset_bottom = 143.0
+theme = SubResource("Theme_roxym")
+theme_override_font_sizes/font_size = 30
+theme_override_styles/focus = SubResource("StyleBoxEmpty_mkth5")
+theme_override_styles/hover = SubResource("StyleBoxTexture_j350d")
+theme_override_styles/pressed = SubResource("StyleBoxTexture_ft4wt")
+theme_override_styles/normal = SubResource("StyleBoxTexture_6ci5d")
