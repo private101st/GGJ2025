@@ -65,3 +65,5 @@ theme_override_styles/focus = SubResource("StyleBoxEmpty_mkth5")
 theme_override_styles/hover = SubResource("StyleBoxTexture_j350d")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ft4wt")
 theme_override_styles/normal = SubResource("StyleBoxTexture_6ci5d")
+
+[connection signal="pressed" from="Events" to="." method="_on_events_pressed"]

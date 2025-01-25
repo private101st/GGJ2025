@@ -60,7 +60,6 @@ func _ready():
 	#else:
 	#	print("Error: Button node not found.")
 
-
 func _on_events_pressed() -> void:
 	apply_random_event()
 	print("\nState after event:", spheres)

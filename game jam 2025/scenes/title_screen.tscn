@@ -1,4 +1,8 @@
-[gd_scene format=3 uid="uid://mn15mfscesvf"]
+[gd_scene load_steps=3 format=3 uid="uid://mn15mfscesvf"]
+
+[ext_resource type="FontFile" uid="uid://bx44wpvn48o3d" path="res://assets/Alphacorsa Personal Use.ttf" id="1_326e1"]
+
+[sub_resource type="CanvasTexture" id="CanvasTexture_p7qvt"]
 
 [node name="TitleScreen" type="Control"]
 layout_mode = 3
@@ -7,3 +11,43 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+
+[node name="Background" type="Sprite2D" parent="."]
+modulate = Color(0.0139623, 0.00027156, 0.0592547, 1)
+self_modulate = Color(0, 0, 0, 1)
+position = Vector2(587, 353)
+scale = Vector2(1326, 838.211)
+texture = SubResource("CanvasTexture_p7qvt")
+
+[node name="Label" type="Label" parent="."]
+layout_mode = 0
+offset_left = 14.0
+offset_top = 17.0
+offset_right = 1133.0
+offset_bottom = 151.0
+theme_override_fonts/font = ExtResource("1_326e1")
+theme_override_font_sizes/font_size = 100
+text = "MANNAGGIA A DIO"
+horizontal_alignment = 1
+vertical_alignment = 1
+
+[node name="PlayButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 337.0
+offset_right = 265.0
+offset_bottom = 401.0
+
+[node name="OptionsButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 421.0
+offset_right = 265.0
+offset_bottom = 485.0
+
+[node name="QuitButton" type="Button" parent="."]
+layout_mode = 0
+offset_left = 44.0
+offset_top = 507.0
+offset_right = 265.0
+offset_bottom = 571.0
