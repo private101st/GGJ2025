@@ -1,25 +1,10 @@
-[gd_scene load_steps=18 format=3 uid="uid://mn15mfscesvf"]
+[gd_scene load_steps=13 format=3 uid="uid://mn15mfscesvf"]
 
 [ext_resource type="FontFile" uid="uid://deio8th2c5mp4" path="res://assets/Pixelmax-Regular.otf" id="1_jes8e"]
 [ext_resource type="Script" path="res://scenes/title_screen.gd" id="1_pdktk"]
 [ext_resource type="Texture2D" uid="uid://kn34nwtgnhnt" path="res://assets/disegno_bottoni.png" id="2_2e7ml"]
-[ext_resource type="Shader" path="res://scenes/small_title_screen.gdshader" id="2_5ucup"]
-[ext_resource type="Shader" path="res://scenes/title_screen.gdshader" id="3_e0mwc"]
-[ext_resource type="FontFile" uid="uid://c2406j7qf8rqv" path="res://assets/ByteBounce.ttf" id="5_eyapp"]
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_p7qvt"]
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_2hjfl"]
-shader = ExtResource("2_5ucup")
-shader_parameter/height = 2.0
-shader_parameter/frequency = 10.0
-shader_parameter/speed = 2.0
-
-[sub_resource type="ShaderMaterial" id="ShaderMaterial_ws047"]
-shader = ExtResource("3_e0mwc")
-shader_parameter/height = 5.0
-shader_parameter/frequency = 10.0
-shader_parameter/speed = 2.0
 
 [sub_resource type="StyleBoxEmpty" id="StyleBoxEmpty_jatro"]
 
@@ -87,75 +72,50 @@ position = Vector2(315, 200.226)
 scale = Vector2(624, 394.452)
 texture = SubResource("CanvasTexture_p7qvt")
 
-[node name="Popping the" type="Label" parent="."]
-material = SubResource("ShaderMaterial_2hjfl")
+[node name="Label" type="Label" parent="."]
 layout_mode = 0
-offset_left = 32.0
-offset_top = 6.0
-offset_right = 1113.0
-offset_bottom = 128.0
-theme_override_colors/font_color = Color(0.523651, 0, 0.169385, 1)
+offset_left = 34.0
+offset_top = 36.2261
+offset_right = 593.0
+offset_bottom = 90.2261
 theme_override_fonts/font = ExtResource("1_jes8e")
 theme_override_font_sizes/font_size = 60
-text = "Popping the"
-horizontal_alignment = 1
-vertical_alignment = 1
-
-[node name="Fermi Paradox" type="Label" parent="."]
-material = SubResource("ShaderMaterial_ws047")
-layout_mode = 0
-offset_left = 35.0
-offset_top = 95.0
-offset_right = 1116.0
-offset_bottom = 229.0
-theme_override_colors/font_color = Color(5.77569e-07, 0.483977, 0.523654, 1)
-theme_override_fonts/font = ExtResource("1_jes8e")
-theme_override_font_sizes/font_size = 140
-text = "Fermi Paradox"
+text = "Gesù Impiccato"
 horizontal_alignment = 1
 vertical_alignment = 1
 
 [node name="PlayButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 45.0
-offset_top = 333.0
-offset_right = 260.0
-offset_bottom = 396.0
-theme_override_fonts/font = ExtResource("5_eyapp")
-theme_override_font_sizes/font_size = 80
+offset_left = 39.0
+offset_top = 203.0
+offset_right = 165.0
+offset_bottom = 240.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_jatro")
 theme_override_styles/hover = SubResource("StyleBoxTexture_b2q1k")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_x3ehp")
 theme_override_styles/normal = SubResource("StyleBoxTexture_b2q1k")
-text = "Play"
 
 [node name="OptionsButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 45.0
-offset_top = 431.0
-offset_right = 260.0
-offset_bottom = 493.0
-theme_override_fonts/font = ExtResource("5_eyapp")
-theme_override_font_sizes/font_size = 80
+offset_left = 39.0
+offset_top = 260.0
+offset_right = 165.0
+offset_bottom = 297.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_chb5d")
 theme_override_styles/hover = SubResource("StyleBoxTexture_0xqog")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_pse8c")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0xqog")
-text = "Options"
 
 [node name="QuitButton" type="Button" parent="."]
 layout_mode = 0
-offset_left = 45.0
-offset_top = 526.0
-offset_right = 260.0
-offset_bottom = 589.0
-theme_override_fonts/font = ExtResource("5_eyapp")
-theme_override_font_sizes/font_size = 80
+offset_left = 39.0
+offset_top = 317.0
+offset_right = 165.0
+offset_bottom = 354.0
 theme_override_styles/focus = SubResource("StyleBoxEmpty_rjshf")
 theme_override_styles/hover = SubResource("StyleBoxTexture_0xqog")
 theme_override_styles/pressed = SubResource("StyleBoxTexture_ecbju")
 theme_override_styles/normal = SubResource("StyleBoxTexture_0xqog")
-text = "Quit"
 
 [connection signal="pressed" from="PlayButton" to="." method="_on_play_button_pressed"]
 [connection signal="pressed" from="OptionsButton" to="." method="_on_options_button_pressed"]
