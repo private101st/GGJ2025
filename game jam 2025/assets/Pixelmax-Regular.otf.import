@@ -15,7 +15,6 @@ dest_files=["res://.godot/imported/Pixelmax-Regular.otf-0f230b067fb8309782b3d57f
 Rendering=null
 antialiasing=1
 generate_mipmaps=false
-disable_embedded_bitmaps=true
 multichannel_signed_distance_field=false
 msdf_pixel_range=8
 msdf_size=48
