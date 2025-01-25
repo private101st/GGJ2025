@@ -8,21 +8,13 @@ script/source = "extends Node2D
 
 [sub_resource type="CanvasTexture" id="CanvasTexture_j7s6r"]
 
-[sub_resource type="CanvasTexture" id="CanvasTexture_dwr40"]
+[node name="AudioStreamPlayer2D" type="AudioStreamPlayer2D" parent="."]
 
-[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_pbm55"]
-bg_color = Color(0, 0.12909, 0.326078, 1)
-border_width_left = 5
-border_width_top = 5
-border_width_right = 5
-border_width_bottom = 5
-border_color = Color(0.939182, 0.942442, 1, 1)
-corner_radius_top_left = 4
-corner_radius_top_right = 4
-corner_radius_bottom_right = 4
-corner_radius_bottom_left = 4
+[node name="EventTab" parent="." instance=ExtResource("2_ytwrt")]
+visible = false
 
-[sub_resource type="Theme" id="Theme_6k0md"]
+[node name="inGame" parent="." instance=ExtResource("2_r34qk")]
+visible = false
 
 [sub_resource type="StyleBoxTexture" id="StyleBoxTexture_t7y1i"]
 texture = ExtResource("2_pbxpp")
@@ -65,7 +57,7 @@ scale = Vector2(150, -147.174)
 texture = SubResource("CanvasTexture_dwr40")
 
 [node name="Camera2D" type="Camera2D" parent="."]
-zoom = Vector2(2, 2)
+zoom = Vector2(1.7, 1.7)
 
 [node name="Panel" type="Panel" parent="."]
 offset_left = -270.0
